@@ -220,7 +220,7 @@ header .header_sub_wrap {
 .feedback .wrap .title_feedback .sub_line {
     left: 0;
     top: 31px;
-    width: 160px;
+    width: 80px;
 }
 
 .design .mask .mask_title .sub_line {
@@ -363,7 +363,7 @@ header .header_sub_wrap {
     gap: 60px;
     grid-auto-flow: row;
     margin: 70px 0;
-    position: relative;
+    /* position: relative; */
 
 }
 
@@ -386,6 +386,7 @@ header .header_sub_wrap {
     justify-content: center;
     gap: 20px;
     justify-content: space-between;
+    position: relative;
 
 }
 
@@ -409,7 +410,8 @@ header .header_sub_wrap {
 
 .popular .items .item_card .item_card_imge .rubl {
     position: absolute;
-    bottom: 14px;
+    /* bottom: 14px; */
+    top: 160px;
     left: 14px;
     font-weight: 500;
     font-size: 12px;

@@ -4,9 +4,18 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Inter", sans-serif;
+    /* position: relative; */
+    height: fit-content;
+    position: relative;
 }
+
+
 
 .parrent_container {
     max-width: 1260px;
@@ -24,6 +33,10 @@ body {
     padding: 0 30px;
 }
 
+.phone_navbar {
+    display: none;
+}
+
 button {
     padding: 12px 30px;
     background-color: white;
@@ -39,9 +52,8 @@ button {
 
 }
 
-button img {
-    width: 20px;
-}
+
+
 
 button:hover {
     cursor: pointer;
@@ -64,8 +76,13 @@ button:active {
 }
 
 header {
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.15);
+
 }
 
 .logo {
@@ -117,13 +134,30 @@ header .header_sub_wrap nav ul li a {
 }
 
 header .header_sub_wrap nav ul li a:hover {
-    color: #ffa630;
+    color: rgb(255, 47, 84);
+    
+}
+
+
+header .header_sub_wrap nav ul li a:hover::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 47, 84);
+    position: absolute;
+    bottom: -6px;
+
 }
 
 header .header_sub_wrap nav ul li a::before {
     content: "";
     width: 0;
-    transition: width 0.4s;
+    height: 3px;
+    transition: 0.4s;
+    position: absolute;
+    bottom: -6px;
+    transition: 0.4s;
+    
 }
 
 
@@ -278,7 +312,8 @@ header .header_sub_wrap {
 }
 
 .advantage .card {
-    width: 192px;
+    max-width: 192px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -301,6 +336,7 @@ header .header_sub_wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 28px;
 }
 
 .design {
@@ -360,6 +396,8 @@ header .header_sub_wrap {
     position: relative;
 
 }
+
+
 
 
 .design .mask .window_img img:last-child {
